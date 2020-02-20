@@ -1,0 +1,10 @@
+{
+  "api": {
+    "auth": {
+      "login": {
+        "login": 123,
+        "password": "3333"
+      }
+    }
+  }
+}
