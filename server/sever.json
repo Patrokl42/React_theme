@@ -1,10 +1,51 @@
 {
-  "api": {
-    "auth": {
-      "login": {
-        "login": 123,
-        "password": "3333"
-      }
+  "login": {
+    "token": "eqw34sdfsd@sa",
+    "user": {
+      "id": 1,
+      "fullName": "Ivan Ivanov",
+      "location": "Ivano-Frankivsk",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTvCOMEZnGc7AYujeMTmuX8Mxg2hjXWzXcxnrSAH_q6KVuYwLu5",
+      "phone": "+380987123",
+      "email": "testEmail@mail.com"
     }
-  }
+  },
+  "contacts": [
+    {
+      "id": "1",
+      "fullName": "Olexandr Ivanov",
+      "company": "Microsoft",
+      "phone": "+3809875122",
+      "avatar": "https://gta5.su/wp-content/uploads/2013/12/v_frisk_me_256x256.jpg",
+      "email": "contactEmail@mail.com",
+      "birthday": "12-11-2001"
+    },
+    {
+      "id": "2",
+      "fullName": "Sopgia Ivanov",
+      "company": "Oracle",
+      "phone": "+3809123112",
+      "avatar": "https://gta5.su/wp-content/uploads/2013/12/v_frisk_me_256x256.jpg",
+      "email": "contactEmail@mail.com",
+      "birthday": "12-11-2001"
+    },
+    {
+      "id": "3",
+      "fullName": "Olga Musk",
+      "company": "Tesla",
+      "phone": "+3803123112",
+      "avatar": "https://gta5.su/wp-content/uploads/2013/12/v_frisk_me_256x256.jpg",
+      "email": "contactEmail@mail.com",
+      "birthday": "12-11-2001"
+    },
+    {
+      "id": "4",
+      "fullName": "Ruslan Olexiiw",
+      "company": "MatLab",
+      "phone": "+33333333333",
+      "avatar": "https://gta5.su/wp-content/uploads/2013/12/v_frisk_me_256x256.jpg",
+      "email": "contactEmail@mail.com",
+      "birthday": "12-11-2001"
+    }
+  ]
 }

@@ -1,11 +1,13 @@
 import axios from 'axios';
 
+axios.defaults.baseURL = 'http://localhost:3004';
+
 export const Auth = {
    _token: null,
 
   setToken(token) {
      this._token = token;
-     window.localStorage('__token', token);
+     localStorage.setItem('__token', token);
   },
 
   isLoggedIn() {
@@ -13,7 +15,7 @@ export const Auth = {
   },
 
   login(email, password) {
-    return axios.post('/api/auth/login', {
+    return axios.get('/login', {
       email,
       password
     })
@@ -24,6 +26,21 @@ export const Auth = {
       email,
       password,
       fullName
+    })
+  },
+};
+
+export const Contacts = {
+  getContacts() {
+    return axios.get('/contacts')
+  },
+  createContact(fullName, email, company, phoneNumber, birthday) {
+    return axios.post('/contacts', {
+      fullName,
+      email,
+      company,
+      phoneNumber,
+      birthday
     })
   },
 };

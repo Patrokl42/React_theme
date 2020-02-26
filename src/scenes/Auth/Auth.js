@@ -7,7 +7,6 @@ import Login from "../Login/Login";
 const Auth = () => {
     return (
         <>
-            {/*<Header />*/}
             <Switch>
                 <Route path={routes.login} component={Login}/>
                 <Route path={routes.register} component={Register}/>

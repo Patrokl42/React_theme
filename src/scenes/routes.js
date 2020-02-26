@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch, BrowserRouter, Route} from 'react-router-dom';
+import {Switch, BrowserRouter, Route, Redirect} from 'react-router-dom';
 import Auth from './Auth/Auth';
 import Main from "./Main/Main";
 
@@ -8,6 +8,12 @@ export const routes = {
   auth: '/auth',
   login: '/auth/login',
   register: '/auth/register',
+  overview: '/overview',
+  tickets: '/tickets',
+  ideas: '/ideas',
+  contacts: '/contacts',
+  agents: '/agents',
+  articles: '/articles'
 };
 
 function Router() {

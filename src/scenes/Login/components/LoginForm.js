@@ -7,8 +7,8 @@ import Input from "../../../components/Form/Input/Input";
 import Button from "../../../components/Form/Button/Button";
 
 const LoginSchema = Yup.object().shape({
-  login: Yup.string()
-    .min(5, 'Too Short Login!')
+  email: Yup.string()
+    .min(5, 'Too Short Email!')
     .max(50, 'Too Long!')
     .required('Required'),
   password: Yup.string()
@@ -21,7 +21,7 @@ const LoginForm = ({onSubmit}) => (
   <div className={s.login_wrapper}>
     <Formik
       initialValues={{
-        login: '',
+        email: '',
         password: '',
       }}
       validationSchema={LoginSchema}
@@ -30,7 +30,11 @@ const LoginForm = ({onSubmit}) => (
       <Form>
         <h1 className={s.form_title}>Login</h1>
         <h5 className={s.form_subtitle}>Enter your Username and Password</h5>
-        <Input label='Login' name='login' placeholder='test@gmail.com' />
+        <Input
+          label='Email'
+          name='email'
+          placeholder='test@gmail.com'
+        />
         <Input label={'Password'} name='password' placeholder='*******' />
         <Button title={'Login'} />
       </Form>

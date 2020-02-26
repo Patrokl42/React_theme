@@ -1,23 +1,18 @@
-export const FETCH_LOGIN_PENDING = 'FETCH_LOGIN_PENDING';
-export const FETCH_LOGIN_SUCCESS = 'FETCH_LOGIN_SUCCESS';
-export const FETCH_LOGIN_ERROR = 'FETCH_LOGIN_ERROR';
+import Api from '../../api';
 
-function fetchLoginPending() {
-  return {
-    type: FETCH_LOGIN_PENDING
+export const userLogin = (email, password) => {
+  return async (dispatch) => {
+    try {
+      const res = await Api.Auth.login(email, password);
+      Api.Auth.setToken(res.data.token);
+      dispatch(loginUser(res.data.user))
+    } catch (err) {
+      console.log(err);
+    }
   }
-}
+};
 
-function fetchLoginSuccess(user) {
-  return {
-    type: FETCH_LOGIN_SUCCESS,
-    user: user
-  }
-}
-
-function fetchLoginError(error) {
-  return {
-    type: FETCH_LOGIN_ERROR,
-    error: error
-  }
-}
+const loginUser = user => ({
+  type: 'LOGIN_USER',
+  payload: user
+});
