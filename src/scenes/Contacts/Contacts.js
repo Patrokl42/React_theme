@@ -1,12 +1,10 @@
 import React from 'react';
-import ContactList from "./components/ContactList/ContactList";
-import ContactForm from "./components/ContactForm/ContactForm";
+import ContactTable from "./components/ContactTable/ContactTable";
 
 const Contacts = () => {
   return (
     <div>
-      <ContactForm/>
-      <ContactList/>
+      <ContactTable/>
     </div>
   );
 };

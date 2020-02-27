@@ -1,0 +1,26 @@
+.chart_wrapper {
+  background: linear-gradient(to right, #122230 0%, #192d3e 100%);
+  margin-left: -20px;
+}
+
+.chart_description {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chart_options {
+  padding-top: 20px;
+  padding-right: 10px;
+}
+
+.chart_option {
+  background-color: transparent;
+  color: #c4c4c4;
+  border: 1px solid #fff;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 10px;
+}

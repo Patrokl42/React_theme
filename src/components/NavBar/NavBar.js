@@ -35,7 +35,7 @@ const NavBar = () => {
         <div className={s.nav_bar_icon}>
           {titcketIcon}
         </div>
-        <span>Tickets</span>
+        <span>Todo</span>
       </NavLink>
       <NavLink to={routes.ideas} className={s.nav_bar_item} activeClassName={s.selected}>
         <div className={s.nav_bar_icon}>

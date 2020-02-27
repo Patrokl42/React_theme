@@ -1,0 +1,14 @@
+.contact_table_item {
+  width: 100%;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e2e2e2;
+  }
+
+  td {
+    text-align: center;
+  }
+}

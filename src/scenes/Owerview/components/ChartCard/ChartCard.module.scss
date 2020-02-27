@@ -1,0 +1,33 @@
+.chart_card {
+  background-color: #fff;
+  max-width: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  padding: 10px 10px;
+  padding-left: 3px;
+  margin-top: 10px;
+  width: 33.33333%;
+  margin-right: 30px;
+}
+
+.chart_discription {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart_title {
+  color: #999999;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.chart_number {
+  color: #060606;
+  font-size: 54px;
+  padding-left: 10px;
+  font-weight: 300;
+}
+
+.chart {
+  max-height: 150px;
+}

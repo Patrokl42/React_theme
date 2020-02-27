@@ -16,12 +16,34 @@ const fetchedContacts = contacts => ({
   payload: contacts
 });
 
-export const createContact = (contact) => {
+export const updateContact = contact => {
   return async (dispatch) => {
     try {
-      console.log(contact);
+      // const res = await Api.Contacts.updateContact(contact);
+      dispatch(updatedContact(contact))
     } catch (err) {
       console.log(err);
     }
   }
 };
+
+const updatedContact = contact => ({
+  type: 'UPDATE_CONTACT',
+  payload: contact
+});
+
+export const removeContact = contact => {
+  return async (dispatch) => {
+    try {
+      // const res = await Api.Contacts.updateContact(contact);
+      dispatch(removedContact(contact))
+    } catch (err) {
+      console.log(err);
+    }
+  }
+}
+
+const removedContact = contact => ({
+  type: 'REMOVE_CONTACT',
+  payload: contact
+});

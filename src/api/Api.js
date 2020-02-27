@@ -34,6 +34,7 @@ export const Contacts = {
   getContacts() {
     return axios.get('/contacts')
   },
+
   createContact(fullName, email, company, phoneNumber, birthday) {
     return axios.post('/contacts', {
       fullName,
@@ -43,4 +44,14 @@ export const Contacts = {
       birthday
     })
   },
+
+  updateContact(id, fullName, email, company, phoneNumber, birthday) {
+    return axios.put(`/contacts/${id}`, {
+      fullName,
+      email,
+      company,
+      phoneNumber,
+      birthday
+    })
+  }
 };
