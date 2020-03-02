@@ -15,6 +15,7 @@ const contactReducer = (state = initState, action) => {
       const updatedContacts = state.contacts.map(
         contact => contact.id === updatedContact.id ? updatedContact : contact
       );
+
       return {
         ...state,
         contacts: updatedContacts,
@@ -24,7 +25,7 @@ const contactReducer = (state = initState, action) => {
       return {
         ...state,
         contacts: state.contacts.filter(contact => contact.id !== action.payload.id)
-      }
+      };
 
     default:
       return state;

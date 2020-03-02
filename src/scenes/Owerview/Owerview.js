@@ -12,7 +12,7 @@ const Overview = () => {
       </div>
       <div className={s.chart_cards}>
         <ChartCard title={'Visitor'} chartColor={'#adffa8'}/>
-        <ChartCard title={'Users'}  chartColor={'#ff4548'}/>
+        <ChartCard title={'Users'} chartColor={'#ff4548'}/>
         <ChartCard title={'Buyers'} chartColor={'#7469ff'}/>
       </div>
     </>

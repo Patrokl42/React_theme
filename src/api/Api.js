@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:3004';
+axios.defaults.baseURL = 'http://5e590ba303a86a0014046bdc.mockapi.io/api';
 
 export const Auth = {
    _token: null,
@@ -22,7 +22,7 @@ export const Auth = {
   },
 
   register(email, password, fullName) {
-    return axios.post('/api/auth/register', {
+    return axios.post('/auth/register', {
       email,
       password,
       fullName
@@ -45,7 +45,24 @@ export const Contacts = {
     })
   },
 
-  updateContact(id, fullName, email, company, phoneNumber, birthday) {
+  updateContact({id, fullName, email, company, phoneNumber, birthday}) {
+    console.log(id)
+    return axios.put(`/contacts/${id}`, {
+      fullName,
+      email,
+      company,
+      phoneNumber,
+      birthday
+    })
+  },
+
+  removeContact(id) {
+    return axios.delete(`/contacts/${id}`)
+  }
+};
+
+export const Charts = {
+  getChartById({id, fullName, email, company, phoneNumber, birthday}) {
     return axios.put(`/contacts/${id}`, {
       fullName,
       email,
@@ -54,4 +71,20 @@ export const Contacts = {
       birthday
     })
   }
+};
+
+export const Todos = {
+  getTodos() {
+    return axios.get(`/todo`)
+  },
+
+  updateTodo({id, title, description, isFavorite,  isComplete, labels}) {
+    return axios.put(`/todo/${id}`, {
+      title,
+      description,
+      isFavorite,
+      isComplete,
+      labels
+    })
+  },
 };

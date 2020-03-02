@@ -22,7 +22,7 @@ const ContactSchema = Yup.object().shape({
     .max(14, 'Too Long Number!'),
   birthday: Yup.string()
     .min(7, 'Too Short Birthday Date!')
-    .max(10, 'Too Long Birthday Date!'),
+    .max(50, 'Too Long Birthday Date!'),
 });
 
 const ContactModal = ({onSubmit, contact, openModal}) => {

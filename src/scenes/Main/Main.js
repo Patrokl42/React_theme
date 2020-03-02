@@ -5,6 +5,7 @@ import { routes } from '../routes';
 import Contacts from "../Contacts/Contacts";
 import Overview from "../Owerview/Owerview";
 import s from './Main.module.scss';
+import Todo from "../Todo/Todo";
 
 const Main = () => {
     return (
@@ -15,6 +16,7 @@ const Main = () => {
             <Switch>
               <Route path={routes.contacts} component={Contacts}/>
               <Route path={routes.overview} component={Overview}/>
+              <Route path={routes.todo} component={Todo}/>
             </Switch>
           </div>
 

@@ -31,7 +31,7 @@ const NavBar = () => {
         </div>
         <span>Overview</span>
       </NavLink>
-      <NavLink to={routes.tickets} className={s.nav_bar_item} activeClassName={s.selected}>
+      <NavLink to={routes.todo} className={s.nav_bar_item} activeClassName={s.selected}>
         <div className={s.nav_bar_icon}>
           {titcketIcon}
         </div>

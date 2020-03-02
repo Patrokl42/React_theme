@@ -9,7 +9,7 @@ export const routes = {
   login: '/auth/login',
   register: '/auth/register',
   overview: '/overview',
-  tickets: '/tickets',
+  todo: '/todo',
   ideas: '/ideas',
   contacts: '/contacts',
   agents: '/agents',

@@ -19,7 +19,7 @@ const fetchedContacts = contacts => ({
 export const updateContact = contact => {
   return async (dispatch) => {
     try {
-      // const res = await Api.Contacts.updateContact(contact);
+      const res = await Api.Contacts.updateContact(contact);
       dispatch(updatedContact(contact))
     } catch (err) {
       console.log(err);
@@ -35,7 +35,8 @@ const updatedContact = contact => ({
 export const removeContact = contact => {
   return async (dispatch) => {
     try {
-      // const res = await Api.Contacts.updateContact(contact);
+      const res = await Api.Contacts.removeContact(contact.id);
+      console.log(res);
       dispatch(removedContact(contact))
     } catch (err) {
       console.log(err);

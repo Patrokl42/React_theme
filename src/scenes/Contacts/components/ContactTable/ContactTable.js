@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {getContacts} from "../../../../store/actions/contactActions";
+import React, { useEffect } from 'react';
+import  {useDispatch, useSelector } from "react-redux";
+import { getContacts } from "../../../../store/actions/contactActions";
 import ContactTableItem from "../../../../components/Contact/ContactTableItem/ContactTableItem";
 import Loader from "../../../../components/Loader/Loader";
 
