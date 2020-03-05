@@ -1,3 +1,7 @@
-import * as Api from './Api';
+import * as appApi from './appApi';
+import * as weatherApi from './weatherApi';
 
-export default Api;
+export {
+  appApi,
+  weatherApi
+};

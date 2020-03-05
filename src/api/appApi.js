@@ -1,6 +1,10 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://5e590ba303a86a0014046bdc.mockapi.io/api';
+const _apiBase = 'http://5e590ba303a86a0014046bdc.mockapi.io/api';
+
+const getResourse = (url) => {
+  return `${_apiBase}${url}`
+};
 
 export const Auth = {
    _token: null,
@@ -15,14 +19,14 @@ export const Auth = {
   },
 
   login(email, password) {
-    return axios.get('/login', {
+    return axios.get(getResourse('/login'), {
       email,
       password
     })
   },
 
   register(email, password, fullName) {
-    return axios.post('/auth/register', {
+    return axios.post(getResourse('/auth/register'), {
       email,
       password,
       fullName
@@ -32,11 +36,11 @@ export const Auth = {
 
 export const Contacts = {
   getContacts() {
-    return axios.get('/contacts')
+    return axios.get(getResourse('/contacts'))
   },
 
   createContact(fullName, email, company, phoneNumber, birthday) {
-    return axios.post('/contacts', {
+    return axios.post(getResourse('/contacts'), {
       fullName,
       email,
       company,
@@ -47,7 +51,7 @@ export const Contacts = {
 
   updateContact({id, fullName, email, company, phoneNumber, birthday}) {
     console.log(id)
-    return axios.put(`/contacts/${id}`, {
+    return axios.put(getResourse(`/contacts/${id}`), {
       fullName,
       email,
       company,
@@ -57,13 +61,13 @@ export const Contacts = {
   },
 
   removeContact(id) {
-    return axios.delete(`/contacts/${id}`)
+    return axios.delete(getResourse(`/contacts/${id}`))
   }
 };
 
 export const Charts = {
   getChartById({id, fullName, email, company, phoneNumber, birthday}) {
-    return axios.put(`/contacts/${id}`, {
+    return axios.put(getResourse(`/contacts/${id}`), {
       fullName,
       email,
       company,
@@ -75,11 +79,11 @@ export const Charts = {
 
 export const Todos = {
   getTodos() {
-    return axios.get(`/todo`)
+    return axios.get(getResourse(`/todo`))
   },
 
   updateTodo({id, title, description, isFavorite,  isComplete, labels}) {
-    return axios.put(`/todo/${id}`, {
+    return axios.put(getResourse(`/todo/${id}`), {
       title,
       description,
       isFavorite,
@@ -87,4 +91,18 @@ export const Todos = {
       labels
     })
   },
+
+  removeTodo(id) {
+    return axios.delete(getResourse(`/todo/${id}`))
+  },
+
+  createTodo({ title, description, isFavorite,  isComplete, labels }) {
+    return axios.post(getResourse('/todo/'), {
+      title,
+      description,
+      isFavorite,
+      isComplete,
+      labels
+    })
+  }
 };

@@ -1,14 +1,16 @@
 import React from "react";
 import s from './NavItem.module.scss';
 
-import { favoriteIcon } from "../Icons/Icons";
+import { NavLink } from "react-router-dom";
 
-const NavItem = ({title, icon}) => {
+const NavItem = ({ item }) => {
   return (
-    <div className={s.nav_item}>
-      <span className={s.icon}>{icon}</span>
-      <span className={s.title}>{title}</span>
-    </div>
+    <>
+      <NavLink to={item.navigateTo} className={s.nav_item} activeClassName={s.nav_active}>
+        <span className={s.icon}>{item.icon}</span>
+        <span className={s.title}>{item.title}</span>
+      </NavLink>
+    </>
   )
 };
 

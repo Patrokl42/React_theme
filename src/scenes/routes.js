@@ -10,7 +10,10 @@ export const routes = {
   register: '/auth/register',
   overview: '/overview',
   todo: '/todo',
-  ideas: '/ideas',
+  todoAll: '/todo/all',
+  todoFavorites: '/todo/favorites',
+  todoCompleted: '/todo/completed',
+  weather: '/weather',
   contacts: '/contacts',
   agents: '/agents',
   articles: '/articles'

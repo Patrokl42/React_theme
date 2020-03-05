@@ -9,7 +9,7 @@ import {
   diagramIcon,
   groupIcon,
   lampIcon,
-  settingIcon
+  cloudAndSunIcon
 } from "../Icons/Icons";
 
 import Avatar from "../User/Avatar/Avatar";
@@ -37,11 +37,11 @@ const NavBar = () => {
         </div>
         <span>Todo</span>
       </NavLink>
-      <NavLink to={routes.ideas} className={s.nav_bar_item} activeClassName={s.selected}>
+      <NavLink to={routes.weather} className={s.nav_bar_item} activeClassName={s.selected}>
         <div className={s.nav_bar_icon}>
-          {lampIcon}
+          {cloudAndSunIcon}
         </div>
-        <span>Ideas</span>
+        <span>Weather</span>
       </NavLink>
       <NavLink to={routes.contacts} className={s.nav_bar_item} activeClassName={s.selected}>
         <div className={s.nav_bar_icon}>

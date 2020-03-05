@@ -3,8 +3,17 @@
   padding: 10px 0;
   width: 100%;
   min-width: 200px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000000de;
 }
 
 .icon {
   margin: 0 10px;
+}
+
+.nav_active {
+  background-color: #61dafb;
+  border-radius: 0 10px 10px 0;
 }

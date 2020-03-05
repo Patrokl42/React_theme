@@ -1,8 +1,8 @@
 import React from "react";
 import {useField} from "formik";
-import s from './ContactInput.module.scss';
+import s from './ModalInput.module.scss';
 
-const ContactInput = ({label, ...props}) => {
+const ModalInput = ({label, ...props}) => {
   const [field, meta] = useField(props);
   return (
     <div className={s.input_wrapper}>
@@ -16,4 +16,4 @@ const ContactInput = ({label, ...props}) => {
 };
 
 
-export default ContactInput;
+export default ModalInput;

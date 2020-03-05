@@ -16,31 +16,29 @@ const ContactTable = () => {
 
   console.log(contacts);
 
-  return contacts.length === undefined
-    ?
-    <Loader/>
-    : (
-    <table className={s.contact_table}>
-      <thead>
-      <tr className={s.contact_table_header}>
-        <th>Avatar</th>
-        <th>Full Name</th>
-        <th>Company</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Birthday</th>
-        <th></th>
-      </tr>
-      </thead>
-      <tbody>
-      {contacts.map(contact => {
-        return (
-          <ContactTableItem contact={contact} key={contact.id}/>
-        )
-      })}
-      </tbody>
-    </table>
-  )
+  return contacts.length === undefined ? <Loader/> :
+    (
+      <table className={s.contact_table}>
+        <thead>
+        <tr className={s.contact_table_header}>
+          <th>Avatar</th>
+          <th>Full Name</th>
+          <th>Company</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Birthday</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {contacts.map(contact => {
+          return (
+            <ContactTableItem contact={contact} key={contact.id}/>
+          )
+        })}
+        </tbody>
+      </table>
+    )
 };
 
 export default ContactTable;

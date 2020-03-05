@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 
 import s from './ContactModal.module.scss';
 import Avatar from "../../User/Avatar/Avatar";
-import ContactInput from "../ContactInput/ContactInput";
+import ModalInput from "../../Form/ModalInput/ModalInput";
 
 const ContactSchema = Yup.object().shape({
   fullName: Yup.string()
@@ -52,23 +52,23 @@ const ContactModal = ({onSubmit, contact, openModal}) => {
           </div>
         </div>
         <div className={s.modal_inputs}>
-          <ContactInput
+          <ModalInput
             label={'Full Name'}
             name='fullName'
           />
-          <ContactInput
+          <ModalInput
             label={'Company'}
             name='company'
           />
-          <ContactInput
+          <ModalInput
             label={'Email'}
             name='email'
           />
-          <ContactInput
+          <ModalInput
             label={'Phone Number'}
             name='phone'
           />
-          <ContactInput
+          <ModalInput
             label={'Birthday'}
             name='birthday'
           />
